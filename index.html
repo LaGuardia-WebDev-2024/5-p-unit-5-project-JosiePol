@@ -6,7 +6,7 @@ Requirements
 
 Select TWO Additional Features to Add  
 [ no ] Feature 1 - Flexbox
-[ no ] Feature 2 - Flip Card
+[ yes ] Feature 2 - Flip Card
 [ no ] Feature 3 - Animation
 [ no ] Feature 4 - Linear Gradient
 [ no ] Feature 5 - Use a .Gif
@@ -21,10 +21,140 @@ Select TWO Additional Features to Add
   <title>Unit 5 Project</title>
   <meta charset="utf-8">
   <style>
+.flip-card1 {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
 
+.flip-card-inner1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(24, 149, 186, 0.2);
+}
+
+.flip-card1:hover .flip-card-inner1 {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front1, .flip-card-back1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front1 {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back1 {
+  background-color: #f1ba8a;
+  color: rgb(149, 72, 4);
+  transform: rotateY(180deg);
+  
+}
+
+
+
+.flip-card2 {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card2:hover .flip-card-inner2 {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front2, .flip-card-back2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front2 {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back2 {
+  background-color: #698aee;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+#heading {
+  color: #698aee;
+  text-align: center;
+
+}
   </style>
 </head>
 <body>
+
+<h1>Invitation to New Years - have a flipcard with one side being a photo and the other side being information - have a 2nd flip card being what to bring - 2 flipcards have a photo and add a photo as a background - add a pulse animation to the heading<br> Ask how to add animation to heading and how to align flipcards<br> add a background, add padding, border, and margin to flexboxes when aligning next to eachother and  </h1>
+
+<h1 id="heading">
+  Happy New Years!
+  
+</h1>
+
+<div class="flip-card1">
+  <div class="flip-card-inner1">
+    <div class="flip-card-front1">
+      <img src="https://mf.b37mrtl.ru/rbthmedia/images/2021.12/original/61cae1be98901155693462bb.jpg" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back1">
+      <h1>Happy New Years</h1>
+      <h3>
+        <ul>
+          <li>Date: December 31, 2025</li>
+          <li>Arrive: 7pm EST</li>
+          <li>Dress Code: Please wear red, orange, gold, or brown</li>
+        </ul>
+      </h3>
+    </div>
+  </div>
+</div>
+
+
+<div class="flip-card2">
+  <div class="flip-card-inner2">
+    <div class="flip-card-front2">
+      <img src="https://i.pinimg.com/236x/80/b0/f1/80b0f13c0b0b69e30a83bf9fe9025134.jpg" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back2">
+      <h1>Please Bring:</h1> 
+      <h3>
+        <ul>
+          <li>Anything for the Table</li>
+          <li>Any Games or Things to Do</li>
+        </ul>
+      </h3>
+    </div>
+  </div>
+</div>
 
  
 
