@@ -7,7 +7,7 @@ Requirements
 Select TWO Additional Features to Add  
 [ no ] Feature 1 - Flexbox
 [ yes ] Feature 2 - Flip Card
-[ no ] Feature 3 - Animation
+[ yes ] Feature 3 - Animation
 [ no ] Feature 4 - Linear Gradient
 [ no ] Feature 5 - Use a .Gif
 [ no ] Feature 6 - Unique Border Styles
@@ -100,26 +100,61 @@ Select TWO Additional Features to Add
 
 .flip-card-back2 {
   background-color: #698aee;
-  color: white;
+  color: rgb(226, 232, 245);
   transform: rotateY(180deg);
 }
 
 #heading {
-  color: #698aee;
+  color: #173a13;
   text-align: center;
-
+  background-color: #7c9e78;
 }
+
+body{
+   background-image: url("https://static.vecteezy.com/system/resources/previews/004/258/033/non_2x/cute-winter-seamless-pattern-background-with-christmas-tree-simple-doodles-and-snowflakes-in-childish-hand-drawn-style-seasonal-new-year-holiday-festive-backdrop-texture-print-vector.jpg");
+}
+
+#heading{
+animation: pulse 2s cubic-bezier(0.22, 1, 0.36, 1) 0s infinite reverse forwards;}
+@keyframes pulse {
+  0% {
+	transform: scale(1);
+  }
+
+  50% {
+	transform: scale(1.1);
+  }
+
+  100% {
+	transform: scale(1);
+  }
+}
+
+#all{
+  display:flex;
+  justify-content: space-around;
+}
+
+#colors{
+  color: rgb(90, 3, 3);
+}
+
+#imags{
+border: 10px solid rgb(7, 95, 13);
+padding: 10px;
+margin: 20px;
+display:flex;
+justify-content: space-around;
+}
+
   </style>
 </head>
 <body>
 
-<h1>Invitation to New Years - have a flipcard with one side being a photo and the other side being information - have a 2nd flip card being what to bring - 2 flipcards have a photo and add a photo as a background - add a pulse animation to the heading<br> Ask how to add animation to heading and how to align flipcards<br> add a background, add padding, border, and margin to flexboxes when aligning next to eachother and  </h1>
-
 <h1 id="heading">
-  Happy New Years!
+  Happy New Years!</h1>
   
-</h1>
-
+<div id="all">
 <div class="flip-card1">
   <div class="flip-card-inner1">
     <div class="flip-card-front1">
@@ -131,7 +166,7 @@ Select TWO Additional Features to Add
         <ul>
           <li>Date: December 31, 2025</li>
           <li>Arrive: 7pm EST</li>
-          <li>Dress Code: Please wear red, orange, gold, or brown</li>
+          <li>Dress Code: Please wear <span id="colors">red, orange, gold, or brown</span></li>
         </ul>
       </h3>
     </div>
@@ -149,14 +184,20 @@ Select TWO Additional Features to Add
       <h3>
         <ul>
           <li>Anything for the Table</li>
-          <li>Any Games or Things to Do</li>
+          <li>Any Games for kids</li>
         </ul>
       </h3>
     </div>
   </div>
 </div>
+</div>
 
- 
+<div id="imags">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUjm8Vlwc3MA-suVFsoe25veSi6-CldKWXMg&s" width="200">
+<img src="https://mf.b37mrtl.ru/rbthmedia/images/2021.12/original/61cae1be98901155693462c7.jpg" width="400">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-TBKaDBGxY9B5LMqssKWjlvHKNbAvJH9NUhNEOD8u-S2ZLFkl_5KKQcwf5DI_mfRWyRc&usqp=CAU" width="300">
+<img src="https://www.mazaika.com/postcard/newyear/0115.jpg" width="300">
+</div>
 
 </body>
 </html>
